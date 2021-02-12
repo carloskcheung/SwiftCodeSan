@@ -1,0 +1,9 @@
+language: swift
+osx_image: xcode12.2
+matrix:
+    include:
+        - name: "SwiftCodeSanTests"
+          script: swift test -Xswiftc -DDEBUG
+        - name: "SwiftCodeSanBinary"
+          script: swift build -c release
+
